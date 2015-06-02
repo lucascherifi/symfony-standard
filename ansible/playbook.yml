@@ -1,0 +1,13 @@
+---
+
+- hosts: vm
+  gather_facts: true
+  vars:
+    domain: local.symfony
+    hostname: symfony-vagrant
+    db_name: symfony
+  vars_files:
+    - vars/local.yml
+
+  roles:
+    - project
